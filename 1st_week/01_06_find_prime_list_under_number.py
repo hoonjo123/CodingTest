@@ -12,6 +12,8 @@ def find_prime_list_under_number(number):
             if i%j == 0:
                 is_prime = False
                 break
+
+
         if is_prime:
             primes.append(i)
     return primes

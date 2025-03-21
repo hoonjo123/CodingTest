@@ -1,9 +1,18 @@
 input = [4, 6, 2, 9, 1]
 
+# 가장 앞에 있는 숫자를 기준으로 이미 정렬된 상태라고 가정
+
+
 
 def insertion_sort(array):
-    # 이 부분을 채워보세요!
-    return
+    n = len(array)
+    for i in range(1, n):
+        for j in range(i):
+            if array[i-j] < array[i-j-1]:
+                array[i-j], array[i-j-1] = array[i-j-1], array[i-j]
+            else:
+                break
+    return array
 
 
 insertion_sort(input)
